@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Posts</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<h1>Posts</h1>
+<table>
+    <tr>
+        <th>User ID</th>
+        <th>Title</th>
+        <th>Body</th>
+    </tr>
+    {% for post in posts %}
+    <tr>
+        <td>{{ post.userId }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.body }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
